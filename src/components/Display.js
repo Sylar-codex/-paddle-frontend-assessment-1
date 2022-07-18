@@ -17,14 +17,11 @@ function Display() {
     )
       .then((res) => {
         const newArr = [];
-        console.log("yes", newArr);
         res.data.items.forEach((p) => newArr.push(p));
         setVal((arr) => [...arr, ...newArr]);
-        console.log("no", val);
         setLoading(false);
         setError(false);
         pageNumber += 1;
-        console.log(pageNumber);
       })
       .catch(handleErrors);
   };
